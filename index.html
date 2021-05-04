@@ -1,12 +1,15 @@
 <!DOCTYPE HTML>
 <html>
+
 <head>
   <meta charset="UTF-8">
   <title>シングルページレイアウト</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="こちらはページは研修素材です。このページを使ってHTMLの構成やCSSを使ったレイアウトについて、研修を行います。" />
   <link rel="stylesheet" href="./destyle.css">
   <link rel="stylesheet" href="./style.css">
 </head>
+
 <body>
   <header class="header">
     <div class="wrap">
@@ -25,15 +28,21 @@
   <main>
     <div class="wrap">
       <article>
+        <p class="topic-sentence">
+          ※こちらはページは研修素材です。<br/>このページを使ってHTMLの構成やCSSを使ったレイアウトについて、研修を行います。
+        </p>
         <section id="section01" class="section">
-          <h2 class="chapter-title">HTML構成の概略</h2>
+          <h2 class="chapter-title">HTML構成</h2>
           <div class="topic-box">
             <p class="topic-sentence">
-              HTMLでページを作るための基本的な構成を解説します。以下の情報は必須情報です。<br/>
-              ・「!DOCTYPE HTML」でHTMLのバージョンを宣言します。HTMLのバージョンによって記述が違います。<br/>
-              ・headタグには、ページのメタ情報（ページの設定やインターネット検索で使用される情報）を設定します。<br/>
-              ・bodyタグの中には、ページに表示される内容を記述します。
+              <span class="text-bold">HTML</span>とは、
+              <span class="text-bold">ハイパーテキストマークアップランゲージ</span>の略称でWebページを記述するための言語です。HTMLでページを作るための基本的な構成を解説します。
             </p>
+            <ul class="section-nav">
+              <li>「!DOCTYPE HTML」でHTMLのバージョンを宣言します。HTMLのバージョンによって記述が違います。</li>
+              <li><span class="text-bold">headタグ</span>の子要素には、ページのメタ情報（ページの設定やインターネット検索で使用される情報）を設定します。</li>
+              <li><span class="text-bold">bodyタグ</span>の子要素には、ページに表示される内容を記述します。</li>
+            </ul>
             <div class="code_box">
               <span class="code_box-title">HTML</span>
               <pre><code>
@@ -50,9 +59,9 @@
               </code></pre>
             </div>
             <p class="topic-sentence">
-              HTMLは文書構造を定義するための書式です。その画面で表示する情報の順番や構成を決めるために存在しています。
-              そのため、HTML側では（style属性の指定で設定することはできますが）レイアウトや見た目のスタイルを設定しません。
-              スタイルの設定は「スタイルシート」（.cssファイル）で行なうようにしてください。<br/>
+              <span class="text-bold">HTMLは文書構造を定義するための書式です。</span>その画面で表示する情報の順番や構成を決めるために存在しています。
+              そのため、HTML側では（style属性のインライン指定で設定することはできますが）レイアウトや見た目のスタイルを設定しません。
+              <span class="text-bold">スタイルの設定は「スタイルシート」（.cssファイル）で行なうようにしてください。</span><br />
               以下のようにheadタグにlinkタグでスタイルシートのパスを設定します。
             </p>
             <div class="code_box">
@@ -71,6 +80,10 @@
 &lt;/html&gt;
               </code></pre>
             </div>
+            <p class="topic-sentence">
+              HTMLでは、このように各要素へ入れ子にする形でタグを記述していきます。
+              各タグで書かれたでもののことを「要素（Element）」、要素を囲っている要素のことを「親要素」、要素が囲っている要素のことを「子要素」と呼びます。
+            </p>
           </div>
         </section>
 
@@ -79,7 +92,7 @@
           <div class="text-style-left">
             <div class="topic-box">
               <p class="topic-sentence">
-                数あるタグの中でも一般的に使用頻度の高いタグだけ使い方を解説します。
+                数あるタグの中でも一般的に使用頻度の高いタグだけ使い方を解説します。何を表現している部品であるのかに合わせてタグを使用しましょう。
               </p>
               <ul class="section-nav">
                 <li><a href="#section02-01">テキスト系HTMLタグ</a></li>
@@ -88,12 +101,13 @@
                 <li><a href="#section02-04">テーブル系HTMLタグ</a></li>
                 <li><a href="#section02-05">フォーム系HTMLタグ</a></li>
                 <li><a href="#section02-06">セクション系HTMLタグ</a></li>
-                <li><a href="#section02-07">グローバル属性</a></li>
+                <li><a href="#section02-07">その他のHTMLタグ</a></li>
+                <li><a href="#section02-08">グローバル属性</a></li>
               </ul>
             </div>
             <h3 id="section02-01" class="topic-title">テキスト系HTMLタグ</h3>
             <div class="topic-box">
-              <p class="sentence-title">p要素</p>
+              <p class="sentence-title">pタグ</p>
               <p class="topic-sentence">文章の段落をあらわす要素</p>
               <div class="code_box">
                 <span class="code_box-title">HTML</span>
@@ -107,7 +121,7 @@
                   <p>文章の段落をあらわす要素です。</p>
                 </div>
               </div>
-              <p class="sentence-title">a要素</p>
+              <p class="sentence-title">aタグ</p>
               <p class="topic-sentence">ハイパーリンクをあらわす要素</p>
               <div class="code_box">
                 <span class="code_box-title">HTML</span>
@@ -118,17 +132,17 @@
               <div class="preview_box">
                 <span class="preview_box-title">PREVIEW</span>
                 <div>
-                  <a href="#id" class="default-anchor">ハイパーリンクをあらわす要素です。</a>    
+                  <a href="#id" class="default-anchor">ハイパーリンクをあらわす要素です。</a>
                 </div>
               </div>
             </div>
             <h3 id="section02-02" class="topic-title">リスト系HTMLタグ</h3>
             <div class="topic-box">
-              <p class="sentence-title">ul要素</p>
+              <p class="sentence-title">ulタグ</p>
               <p class="topic-sentence">箇条書き形式のリスト</p>
-              <p class="sentence-title">ol要素</p>
+              <p class="sentence-title">olタグ</p>
               <p class="topic-sentence">連番付き形式のリスト</p>
-              <p class="sentence-title">li要素</p>
+              <p class="sentence-title">liタグ</p>
               <p class="topic-sentence">リストの要素</p>
               <div class="code_box">
                 <span class="code_box-title">HTML</span>
@@ -159,11 +173,11 @@
             </div>
             <h3 id="section02-03" class="topic-title">画像系HTMLタグ</h3>
             <div class="topic-box">
-              <p class="sentence-title">img要素</p>
+              <p class="sentence-title">imgタグ</p>
               <p class="topic-sentence">画像をあらわす要素</p>
               <div class="code_box">
                 <span class="code_box-title">HTML</span>
-                  <pre><code>
+                <pre><code>
 &lt;img src="./img/default.png"&gt;
 &lt;img src="./img/gahaha.png"&gt;
 &lt;img src="./img/important.png"&gt;
@@ -180,13 +194,16 @@
             </div>
             <h3 id="section02-04" class="topic-title">テーブル系HTMLタグ</h3>
             <div class="topic-box">
-              <p class="topic-sentence">表形式データをあらわす要素で画面レイアウトを表現するために使用するべきではないので注意！</p>
-              <p class="sentence-title">table要素</p>
+              <p class="topic-sentence">
+                表形式データをあらわす要素で<span class="text-bold">テーブルタグで画面レイアウトを表現するために使用するべきではないので注意！</span>
+                （基本的に表レイアウトはCSSのdisplayプロパティのgridで作成します。）
+              </p>
+              <p class="sentence-title">tableタグ</p>
               <p class="topic-sentence">テーブルの外側をあらわす要素</p>
-              <p class="sentence-title">tr要素</p>
+              <p class="sentence-title">trタグ</p>
               <p class="topic-sentence">テーブル内の行をあらわす要素</p>
-              <p class="sentence-title">td要素</p>
-              <p class="topic-sentence">テーブル内のセルをあらわす要素</p>                
+              <p class="sentence-title">tdタグ</p>
+              <p class="topic-sentence">テーブル内のセルをあらわす要素</p>
               <div class="code_box">
                 <span class="code_box-title">HTML</span>
                 <pre><code>
@@ -201,37 +218,52 @@
                 <span class="preview_box-title">PREVIEW</span>
                 <div>
                   <table class="default-table">
-                    <tr><td>データ1-1</td><td>データ1-2</td><td>データ1-3</td></tr>
-                    <tr><td>データ2-1</td><td>データ2-2</td><td>データ2-3</td></tr>
-                    <tr><td>データ3-1</td><td>データ3-2</td><td>データ3-3</td></tr>
+                    <tr>
+                      <td>データ1-1</td>
+                      <td>データ1-2</td>
+                      <td>データ1-3</td>
+                    </tr>
+                    <tr>
+                      <td>データ2-1</td>
+                      <td>データ2-2</td>
+                      <td>データ2-3</td>
+                    </tr>
+                    <tr>
+                      <td>データ3-1</td>
+                      <td>データ3-2</td>
+                      <td>データ3-3</td>
+                    </tr>
                   </table>
                 </div>
               </div>
             </div>
             <h3 id="section02-05" class="topic-title">フォーム系HTMLタグ</h3>
             <div class="topic-box">
-              <p class="sentence-title">input要素</p>
-              <p class="topic-sentence">文章の段落をあらわす要素</p>
-              <p class="sentence-title">select / option要素</p>
-              <p class="topic-sentence">文章の段落をあらわす要素</p>
-              <div class="code_box">
-                <span class="code_box-title">HTML</span>
-                <pre><code>
-&lt;p&gt;文章の段落をあらわす要素です。&lt;/p&gt;
-                </code></pre>
-              </div>
+              <p class="topic-sentence">
+                フォーム系HTMLタグは、ユーザーの入力を補助するために使用します。
+              </p>
+              <p class="sentence-title">inputタグ</p>
+              <p class="topic-sentence">type属性で指定したキーワードによってテキストボックスやラジオボタン、チェックボックス、日付ボックスなどの様々な入力・選択部品となる要素</p>
+              <p class="sentence-title">select / optionタグ</p>
+              <p class="topic-sentence">選択肢の中から選ぶ形式の要素</p>
+              <p class="sentence-title">buttonタグ</p>
+              <p class="topic-sentence">クリックすることのできるボタンとなる要素</p>
             </div>
             <h3 id="section02-06" class="topic-title">セクション系HTMLタグ</h3>
             <div class="topic-box">
               <p class="topic-sentence">
-                セクション系HTMLタグは、コンテンツの構造を表現するために使用します。主にWeb検索エンジンに認識されやすくするためのSEO対策で使用されます。社内などの限らてたローカルネットワーク上のWebアプリケーションでは、あまり意識する必要はないと思います。
+                セクション系HTMLタグは、コンテンツの構造を表現するために使用します。
+                主にWeb検索エンジンに認識されやすくするためのSEO対策で使用されます。
+                社内などの限らてたローカルネットワーク上のWebアプリケーションでは、あまり意識する必要はないと思います。
               </p>
-              <p class="sentence-title">h1～h6要素</p>
-              <p class="topic-sentence">文章の段落をあらわす要素</p>
-              <p class="sentence-title">section要素</p>
-              <p class="topic-sentence">文章の段落をあらわす要素</p>
-              <p class="sentence-title">main要素</p>
-              <p class="topic-sentence">文章の段落をあらわす要素</p>
+              <p class="sentence-title">h1～h6タグ</p>
+              <p class="topic-sentence">セクションの見出しとなる要素</p>
+              <p class="sentence-title">sectionタグ</p>
+              <p class="topic-sentence">一般的なセクションをあらわす要素で特定の役割に該当しない場合に使用します</p>
+              <p class="sentence-title">articleタグ</p>
+              <p class="topic-sentence">記事など内容をあらわすの要素</p>
+              <p class="sentence-title">mainタグ</p>
+              <p class="topic-sentence">ページ全体のメインコンテンツをあらわす要素</p>
               <div class="code_box">
                 <span class="code_box-title">HTML</span>
                 <pre><code>
@@ -245,15 +277,37 @@
                 </code></pre>
               </div>
             </div>
-            <h3 id="section02-07" class="topic-title">グローバル属性</h3>
+            <h3 id="section02-07" class="topic-title">その他のHTMLタグ</h3>
             <div class="topic-box">
-              <p class="topic-sentence">属性とは、要素にすべての要素に共通して指定できる属性のことを</p>
+              <p class="topic-sentence">
+                使用頻度は高いですが、分類されないその他の要素を紹介します。
+              </p>
+              <p class="sentence-title">divタグ</p>
+              <p class="topic-sentence">
+                役割を持たない要素でデザインやレイアウトの反映をするために使用されます。
+                HTML5からは分類されなくなりましたが二次元的な範囲を持つ「ブロック要素」の意味合いとして使用されます。
+                使用例としては、デザインで枠線を表示させるための囲いや図形、レイアウトをするためのグルーピングに使用します。
+              </p>
+              <p class="sentence-title">spanタグ</p>
+              <p class="topic-sentence">
+                役割を持たない要素でデザインやレイアウトの反映をするために使用されます。
+                HTML5からは分類されなくなりましたが文章や単語などの一次元的な範囲を持つ「インライン要素」の意味合いとして使用されます。
+                使用例としては、文字列の強調表現など文章を一部だけ目立たせたい場合に使用します。
+              </p>
+            </div>
+            <h3 id="section02-08" class="topic-title">グローバル属性</h3>
+            <div class="topic-box">
+              <p class="topic-sentence">
+                <span class="text-bold">「属性」</span>とは、要素が持つ設定ってのことで、
+                グローバル属性は、すべての要素に共通して指定できる属性のことを指します。
+                グローバル属性以外には、要素ごとに個別の属性が存在します。
+              </p>
               <p class="sentence-title">id属性</p>
               <p class="topic-sentence">要素に固有の名前を付けるための属性</p>
               <p class="sentence-title">class属性</p>
               <p class="topic-sentence">要素が属する種類・分類をあらわすための属性</p>
               <p class="sentence-title">style属性</p>
-              <p class="topic-sentence">CSSの宣言を設定するための属性</p>
+              <p class="topic-sentence">CSSの宣言をインラインで設定するための属性</p>
               <p class="sentence-title">tabindex属性</p>
               <p class="topic-sentence">Tabキーによる移動の順序を設定する属性</p>
               <p class="sentence-title">hidden属性</p>
@@ -267,37 +321,42 @@
               <div class="preview_box">
                 <span class="preview_box-title">PREVIEW</span>
                 <div>
-                  <input type="text" id="textbox" class="text-box" style="width: 300px;" tabindex="-1" placeholder="テキストを入力してください" value="こんにちわ！！！" />
+                  <input type="text" id="textbox" class="text-box" style="width: 300px;" tabindex="-1"
+                    placeholder="テキストを入力してください" value="こんにちわ！！！" />
                 </div>
               </div>
             </div>
           </div>
         </section>
-          
+
         <section id="section03" class="section">
           <h2 class="chapter-title">申込フォーム</h2>
-          <form action="" class="form-grid">
-            <label class="form-label" for="user_name">氏名</label>
-            <input type="text" class="form-input" id="user_name" />
-            <label class="form-label" for="local">お住まい</label>
-            <select id="local" class="form-input">
-              <option value=""></option>
-              <option value="01">北海道地方</option>
-              <option value="02">東方地方</option>
-              <option value="03">中部地方</option>
-              <option value="04">関東地方</option>
-              <option value="05">近畿地方</option>
-              <option value="06">中国地方</option>
-              <option value="07">四国地方</option>
-              <option value="08">九州地方</option>
-              <option value="09">沖縄地方</option>
-            </select>
-            <label class="form-label" for="birthday">生年月日</label>
-            <input type="date" class="form-input" id="birthday" />
-            <label class="form-label" for="phone_number">電話番号</label>
-            <input type="tel" class="form-input" id="phone_number" />
-            <input type="submit" class="form-submit" value="送信"/>
-          </form>
+          <div class="topic-box">
+            <p class="topic-sentence">ユーザーに情報を入力して貰うためにフォーム系タグを使って入力フォームを作成できます。
+              以下はよくある申し込みフォームをイメージした入力フォームです。formタグの子要素にinputタグを配置することでsubmitした際にサーバーに情報を送信できます。</p>
+            <form action="" class="form-grid">
+              <label class="form-label" for="user_name">氏名</label>
+              <input type="text" class="form-input" id="user_name" />
+              <label class="form-label" for="local">お住まい</label>
+              <select id="local" class="form-input">
+                <option value=""></option>
+                <option value="01">北海道地方</option>
+                <option value="02">東方地方</option>
+                <option value="03">中部地方</option>
+                <option value="04">関東地方</option>
+                <option value="05">近畿地方</option>
+                <option value="06">中国地方</option>
+                <option value="07">四国地方</option>
+                <option value="08">九州地方</option>
+                <option value="09">沖縄地方</option>
+              </select>
+              <label class="form-label" for="birthday">生年月日</label>
+              <input type="date" class="form-input" id="birthday" />
+              <label class="form-label" for="phone_number">電話番号</label>
+              <input type="tel" class="form-input" id="phone_number" />
+              <input type="submit" class="form-submit" value="送信" />
+            </form>
+          </div>                      
         </section>
       </article>
     </div>
@@ -311,4 +370,5 @@
     </div>
   </footer>
 </body>
+
 </html>
