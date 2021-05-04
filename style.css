@@ -1,0 +1,310 @@
+@charset "UTF-8";
+html {
+    font-size: 62.5%;
+}
+body {
+    font-family: Arial,"Hiragino Kaku Gothic ProN","Hiragino Sans",Meiryo,sans-serif;
+    color: #454545;
+    text-align: center;
+    font-size: 1.4em;
+    letter-spacing: 0.03em;
+    -webkit-text-size-adjust: 100%;
+    color:#333;
+/*    background-color: #C6CACC;*/
+}
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+*::selection {
+    background-color: #0097d0;
+    color: #fff;
+}
+
+header {
+    width: 100%;
+    background-color: #0097d0;
+    padding: 20px 0 30px;
+}
+
+.wrap {
+    max-width: 640px;
+    margin: 0 auto;
+}
+
+/* ヘッダータイトル */
+.header {
+    color: #fff;
+}
+.site-title {
+    margin-bottom: 20px;
+    font-size: 5.6em;
+    letter-spacing: -3px;
+    font-weight: bold;
+}
+.site-description {
+    margin-bottom: 50px;
+    color: #c1dbe5;
+    font-size: 1.6rem;
+}
+.site-title-sub {
+    margin: 0 0 20px;
+    letter-spacing: 1px;
+    font-size: 2rem;
+}
+.site-title-sub::before,
+.site-title-sub::after {
+    content: '';
+    display: inline-block;
+    width: 15%;
+    height: 2px;
+    margin: 0 10px;
+    background-color: #fff;
+    vertical-align: middle;
+}
+
+/* グローバルナビゲーションメニュー */
+.global-nav {
+    margin-top: 15px;
+    text-align: center;
+}
+.global-nav .nav-item {
+    display: inline-block;
+    margin: 0 10px;
+    border-bottom: 1px dotted #fff;
+}
+.global-nav .nav-item:hover {
+    font-weight: bold;
+}
+
+/* セクション */
+.section {
+    margin: 50px 0 100px;
+}
+.section .chapter-title {
+    font-size: 2.6rem;
+    margin-bottom: 30px;
+    color: #0097d0;
+    font-weight: bold;
+    letter-spacing: 0.3em;
+}
+.section .chapter-title::before,
+.section .chapter-title::after {
+    content: '■';
+    margin: 0 10px;
+}
+.section .topic-title {
+    font-size: 1.2em;
+    border-left: 10px solid #0097d0;
+    border-bottom: 2px solid #e7eef0;
+    border-right: 2px solid #e7eef0;
+    font-weight: bold;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+.section .topic-box {
+    padding: 0 1em;
+}
+.section .topic-box .sentence-title {
+    border-left: 5px solid #e7eef0;
+    padding: 5px 10px;
+    margin-bottom: 10px;
+}
+.section .topic-sentence {
+    letter-spacing: .4px;
+    line-height: 2em;
+    line-break: strict;
+    margin-bottom: 20px;
+    text-align: left;
+    text-indent: 1em;
+}
+.section-nav {
+    margin-bottom: 1em;
+    list-style-type: disc;
+}
+.section-nav li {
+    padding-left: 1em;
+    line-height: 1.5em;
+}
+.section-nav li:before {
+    content: '';
+    top: -20px;
+    left: 0;
+}
+
+/* コード表示 */
+.code_box {
+    position: relative;
+    margin: 0 0 3em;
+    padding: 25px 20px 7px;
+    border: solid 2px #0097d0;
+    text-align: left;
+    overflow-x: auto;
+    background-color: #fff;
+}
+.code_box .code_box-title {
+    position: absolute;
+    display: inline-block;
+    top: -2px;
+    left: -2px;
+    padding: 0 9px;
+    height: 25px;
+    line-height: 25px;
+    font-size: 1.5rem;
+    background: #0097d0;
+    color: #fff;
+    font-weight: bold;
+}
+.code_box code {
+    margin: 0; 
+    padding: 0;
+}
+pre code {
+    font-family: "Hiragino Kaku Gothic ProN", '游ゴシック', 'メイリオ', meiryo, sans-serif;
+}
+.preview_box {
+    position: relative;
+    margin: 0 0 3em;
+    padding: 25px 20px 7px;
+    border: solid 2px #d3d3d3;
+    text-align: left;
+    overflow-x: auto;
+    background-color: #fff;
+}
+.preview_box .preview_box-title {
+    position: absolute;
+    display: inline-block;
+    top: -2px;
+    left: -2px;
+    padding: 0 9px;
+    height: 25px;
+    line-height: 25px;
+    font-size: 1.5rem;
+    background: #d3d3d3;
+    color: #fff;
+    font-weight: bold;
+}
+.preview_box div {
+    margin: 10px 0; 
+    padding: 0;
+}
+.default-anchor {
+    color: -webkit-link;
+}
+.default-anchor:-webkit-any-link {
+    color: -webkit-link;
+    cursor: pointer;
+    text-decoration: underline;
+}
+.default-list {
+    display: block;
+    list-style-type: disc;
+}
+.default-table {
+    display: table;
+    border: solid 1px black;
+    border-collapse: separate;
+    border-spacing: 2px;
+}
+.default-table tr {
+    display: table-row;
+    border: solid 1px black;
+}
+.default-table tr td {
+    display: table-cell;
+    border: solid 1px black;
+}
+
+/* テキスト左寄せ */
+.text-style-left {
+    text-align: left;
+}
+
+/* 入力要素 */
+.form-grid {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+}
+.form-label {
+    grid-column: 1 / 2;
+    margin: 5px 10px;
+    text-align: right;
+    line-height: 30px;
+    background-color: #0097d0;
+    border-radius: 3px;
+    color: #fff;
+    text-align: center;
+    font-weight: bold;
+}
+.form-input {
+    grid-column: 2 / 3;
+    margin: 5px 10px;
+}
+.form-submit {
+    grid-column: 1 / 3;
+    margin: 20px auto;
+    width: 100px;
+}
+input[type="text"] {
+    border: 1px solid gray;
+    border-radius: 3px;
+    text-align: left;
+    padding: 3px 5px;
+    height: 30px;
+}
+input[type="text"]:focus {
+    border: 1px solid #0097d0;
+}
+input[type="tel"], input[type="date"], select {
+    border: 1px solid gray;
+    border-radius: 3px;
+    text-align: left;
+    padding: 3px 5px;
+    height: 30px;
+}
+select::before {
+    content: "";
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: 8px;
+    right: 0;
+    border: 6px solid transparent;
+    border-top: 6px solid #555;
+}
+input[type="tel"]:focus, input[type="date"]:focus, select:focus {
+    border: 1px solid #0097d0;
+}
+input[type="submit"] {
+    border: 1px solid gray;
+    background-color: #0097d0;
+    color: #fff;
+    border: 1px solid #0097d0;
+    border-radius: 3px;
+    padding: 5px;
+}
+input[type="submit"]:focus {
+    border: 1px solid #fff;
+}
+input[type="submit"]:hover {
+    border: 1px solid #555;
+    background-color: #fff;
+    color: #333;
+}
+.img-icon {
+    height: 100px;
+}
+
+/* フッター要素 */
+footer {
+    width: 100%;
+    background-color: #0097d0;
+    padding: 20px 0 30px;
+    color: #fff;
+}
+.campany-logo {
+    border: 3px solid #fff;
+    width: 90px;
+    margin-bottom: 20px;
+}
